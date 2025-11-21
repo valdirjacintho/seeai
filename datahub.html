@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- FUNDO ANIMADO -->
   <canvas id="network-bg"></canvas>
 
   <div class="content-wrapper">
+
     <!-- HEADER -->
     <header>
       <div class="nav-inner">
         <a href="index.html#top" class="brand">
-          <img src="img/seeai-logo.png"
-               alt="Logotipo SEEAI"
-               class="logo-small" />
+          <img src="img/seeai-logo.png" alt="Logotipo SEEAI" class="logo-small" />
           <span class="brand-name">SEEAI</span>
         </a>
 
@@ -34,132 +34,135 @@
     </header>
 
     <!-- HERO DATA HUB -->
-    <main id="top">
-      <section class="hero">
-        <div>
-          <div class="hero-logo">
-            <img src="img/seeai-logo.png"
-                 alt="Logotipo SEEAI Data Hub"
-                 class="logo-hero" />
-          </div>
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <img src="img/seeai-logo.png" class="logo-hero" alt="SEEAI Logo">
 
-          <h1 class="hero-title">
-            SEEAI Data Hub<br />
-            <span class="hero-highlight">o ponto único de verdade para o seu i2</span>.
-          </h1>
+        <h1 class="hero-title">
+          SEEAI Data Hub<br>
+          <span class="hero-highlight">o ponto único de verdade para o seu i2</span>.
+        </h1>
 
-          <p class="hero-subtitle">
-            O SEEAI Data Hub foi desenhado para ambientes de inteligência que dependem da suíte i2.
-            Ele conecta bases internas, fontes externas e dados abertos em um modelo de integração
-            preparado para investigações complexas, com rastreabilidade e governança.
-          </p>
+        <p class="hero-subtitle expanded-sub">
+          O SEEAI Data Hub conecta bases internas, fontes externas e dados abertos em um
+          modelo de integração preparado para investigações complexas, com rastreabilidade e governança.
+        </p>
 
-          <div class="hero-actions">
-            <a href="index.html#contato" class="btn btn-primary">Solicitar demonstração</a>
-            <a href="#caracteristicas" class="btn btn-secondary">Ver características técnicas</a>
-          </div>
+        <div class="hero-actions">
+          <a href="index.html#contato" class="btn btn-primary">Solicitar demonstração</a>
+          <a href="#caracteristicas" class="btn btn-secondary">Ver características técnicas</a>
         </div>
 
-        <aside class="hero-panel">
-          <span class="badge">SEEAI Data Hub</span>
-          <h2>Integração pensada para o analista</h2>
+        <p class="hero-meta">
+          Projetado para ambientes que utilizam a suíte <strong>i2</strong> em operações críticas
+          de <strong>inteligência, fraudes e segurança</strong>.
+        </p>
+      </div>
+
+      <aside class="hero-panel">
+        <span class="badge">SEEAI Data Hub</span>
+        <h2>Integração pensada para o analista</h2>
+        <p>
+          O objetivo do Data Hub não é apenas mover dados, mas organizar entidades,
+          relações e eventos do jeito que o analista pensa os casos: alvos, redes, fluxos e linhas de investigação.
+        </p>
+
+        <div class="network" aria-hidden="true">
+          <div class="network-logo">
+            <img src="img/seeai-logo.png" class="logo-network" alt="SEEAI no centro da rede">
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section id="caracteristicas" class="section-large">
+      <h2 class="section-title">Principais características</h2>
+      <p class="section-sub large-sub">
+        O SEEAI Data Hub foi construído para suportar o crescimento do ambiente de dados e
+        as exigências de auditoria, compliance e segurança da informação.
+      </p>
+
+      <div class="grid-3 wide-grid">
+        <article class="card tall-card">
+          <h3>Modelo orientado a entidades</h3>
           <p>
-            Mais do que mover dados de um lugar para outro, o Data Hub organiza entidades, relacionamentos
-            e eventos de um jeito que faz sentido para o trabalho diário dos times de inteligência e prevenção a fraudes.
+            Estrutura central baseada em entidades-chave para investigações:
+            pessoas, empresas, contas, dispositivos, endereços, eventos, transações e outros objetos relevantes.
           </p>
+          <p>
+            O desenho é pensado para uso intensivo na suíte i2, facilitando visualizações e análises de vínculos.
+          </p>
+        </article>
 
-          <div class="network" aria-hidden="true">
-            <div class="network-logo">
-              <img src="img/seeai-logo.png"
-                   alt="SEEAI – logotipo no centro da rede"
-                   class="logo-network" />
-            </div>
-          </div>
-        </aside>
-      </section>
+        <article class="card tall-card">
+          <h3>Conectores e ingestão contínua</h3>
+          <p>
+            Permite ingestão contínua a partir de bancos relacionais, APIs, arquivos, logs,
+            sistemas antifraude, plataformas policiais e fontes públicas.
+          </p>
+          <p>
+            A arquitetura pode ser ajustada para rodar em nuvem, on-premises ou ambientes híbridos.
+          </p>
+        </article>
 
-      <!-- CARACTERÍSTICAS -->
-      <section id="caracteristicas">
-        <h2 class="section-title">Principais características</h2>
-        <p class="section-sub">
-          O SEEAI Data Hub é flexível o suficiente para acompanhar o crescimento do ambiente de dados,
-          mas estruturado para atender às exigências de auditoria, compliance e operações sigilosas.
-        </p>
+        <article class="card tall-card">
+          <h3>Governança e rastreabilidade</h3>
+          <p>
+            Cada carga de dados registra origem, horário, conjunto de transformações
+            e informações de auditoria, permitindo reconstruir o caminho até o gráfico em i2.
+          </p>
+          <p>
+            Esse desenho facilita compliance, revisões internas e cooperação com órgãos reguladores.
+          </p>
+        </article>
+      </div>
+    </section>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Modelo orientado a entidades</h3>
-            <p>
-              Estruturamos o Data Hub a partir das entidades críticas para a sua operação:
-              pessoas, empresas, contas, dispositivos, endereços, eventos, transações e mais.
-            </p>
-            <p>
-              Tudo pensado para aproveitar ao máximo a capacidade de análise visual da suíte i2.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Conectores e ingestão contínua</h3>
-            <p>
-              Conecte bancos relacionais, APIs, planilhas, arquivos de log, ferramentas de detecção de fraude,
-              sistemas policiais e fontes públicas em fluxos de ingestão automatizados e monitoráveis.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Governança e rastreabilidade</h3>
-            <p>
-              Registro de origem do dado, horário de carga, transformações aplicadas e camada de auditoria
-              para que cada visualização em i2 possa ser justificada em termos técnicos e legais.
-            </p>
-          </article>
+    <!-- BENEFÍCIOS E CASOS DE USO -->
+    <section class="section-large">
+      <div class="two-column">
+        <div>
+          <h2 class="section-title">Benefícios para times de inteligência</h2>
+          <ul class="list">
+            <li>Redução de tempo com extração manual e limpeza de dados.</li>
+            <li>Menos retrabalho e inconsistências entre unidades ou áreas.</li>
+            <li>Visão consolidada do alvo, com histórico e contexto de eventos.</li>
+            <li>Fundação pronta para uso de IA, scoring de risco e automações.</li>
+          </ul>
         </div>
-      </section>
 
-      <!-- BENEFÍCIOS / CASOS DE USO -->
-      <section>
-        <div class="two-column">
-          <div>
-            <h2 class="section-title">Benefícios para times de inteligência</h2>
-            <ul class="list">
-              <li>Menos tempo exportando e limpando dados, mais tempo investigando.</li>
-              <li>Redução de retrabalho e duplicidade de informação entre áreas.</li>
-              <li>Visão única e consolidada do alvo, com histórico e contexto.</li>
-              <li>Base sólida para uso de modelos de IA, scoring de risco e automações.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 class="section-title">Casos de uso comuns</h2>
-            <ul class="list">
-              <li>Fraudes em meios de pagamento, crédito e canais digitais.</li>
-              <li>Investigações de crime organizado e redes de apoio.</li>
-              <li>Operações de inteligência financeira e anticorrupção.</li>
-              <li>Investigações internas e forense corporativa.</li>
-            </ul>
-          </div>
+        <div>
+          <h2 class="section-title">Casos de uso comuns</h2>
+          <ul class="list">
+            <li>Fraudes em meios de pagamento, crédito e contas digitais.</li>
+            <li>Investigações de crime organizado e redes de apoio logístico/financeiro.</li>
+            <li>Operações de inteligência financeira, anticorrupção e integridade.</li>
+            <li>Investigações internas corporativas e forense digital.</li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- CHAMADA FINAL -->
-      <section>
-        <h2 class="section-title">Pronto para conectar o seu i2?</h2>
-        <p class="section-sub">
-          Podemos construir uma prova de conceito a partir dos seus dados reais, conectando o SEEAI Data Hub
-          ao ambiente i2 já existente ou a uma instância piloto. Assim sua equipe avalia o valor na prática.
-        </p>
+    <!-- CHAMADA FINAL -->
+    <section class="section-large">
+      <h2 class="section-title">Pronto para conectar o seu i2?</h2>
+      <p class="section-sub large-sub">
+        Podemos construir uma prova de conceito com os seus dados reais,
+        conectando o SEEAI Data Hub ao ambiente i2 existente ou a uma instância piloto,
+        para que sua equipe avalie o valor na prática.
+      </p>
 
-        <a href="index.html#contato" class="btn btn-primary">Falar com a SEEAI</a>
-      </section>
-    </main>
+      <a href="index.html#contato" class="btn btn-primary">Falar com a SEEAI</a>
+    </section>
 
     <!-- RODAPÉ -->
     <footer>
-      © <span id="year"></span> <strong>SEEAI</strong> · SEEAI Data Hub integrado à suíte i2.
+      © <span id="year"></span> SEEAI · SEEAI Data Hub integrado à suíte i2.
     </footer>
-  </div> <!-- fim .content-wrapper -->
+  </div>
 
-  <!-- SCRIPT: ANO + FUNDO ANIMADO (MESMO DO INDEX) -->
+  <!-- SCRIPT: ANO + ANIMAÇÃO DE FUNDO (MESMO DO INDEX) -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -170,6 +173,7 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
+
     resize();
     window.addEventListener("resize", resize);
 
@@ -188,6 +192,7 @@
         });
       }
     }
+
     initNodes();
 
     function animate() {
@@ -208,9 +213,9 @@
         ctx.fillStyle = "#1ea4ff";
         ctx.fill();
 
-        if (Math.random() < 0.002) {
+        if (Math.random() < 0.003) {
           ctx.beginPath();
-          ctx.arc(node.x, node.y, 3.5, 0, Math.PI * 2);
+          ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
           ctx.fillStyle = "#e6323a";
           ctx.fill();
         }
@@ -238,5 +243,6 @@
 
     animate();
   </script>
+
 </body>
 </html>

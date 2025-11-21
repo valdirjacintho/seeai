@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- FUNDO ANIMADO -->
   <canvas id="network-bg"></canvas>
 
-  <!-- TODO O SITE FICA DENTRO DESTE WRAPPER -->
+  <!-- CONTEÚDO -->
   <div class="content-wrapper">
+
     <!-- HEADER -->
     <header>
       <div class="nav-inner">
         <a href="#top" class="brand">
-          <img src="img/seeai-logo.png"
-               alt="Logotipo SEEAI"
-               class="logo-small" />
+          <img src="img/seeai-logo.png" alt="Logotipo SEEAI" class="logo-small" />
           <span class="brand-name">SEEAI</span>
         </a>
 
@@ -26,7 +26,7 @@
           <ul>
             <li><a href="#quem-somos">Quem somos</a></li>
             <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#datahub">SEEAI Data Hub</a></li>
+            <li><a href="datahub.html">SEEAI Data Hub</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
@@ -34,196 +34,197 @@
       </div>
     </header>
 
-    <!-- HERO -->
-    <main id="top">
-      <section class="hero">
+    <!-- HERO FULL SCREEN -->
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <img src="img/seeai-logo.png" class="logo-hero" alt="SEEAI Logo">
+
+        <h1 class="hero-title">
+          Inteligência investigativa e Data Hub<br>
+          para quem precisa <span class="hero-highlight">ver além dos dados</span>.
+        </h1>
+
+        <p class="hero-subtitle expanded-sub">
+          A SEEAI integra a suíte i2, entrega um Data Hub completo,
+          oferece consultoria especializada, capacitação e suporte
+          para ambientes de investigação, risco e prevenção a fraudes.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary">Agendar conversa</a>
+          <a href="datahub.html" class="btn btn-secondary">Conhecer o SEEAI Data Hub</a>
+        </div>
+
+        <p class="hero-meta">
+          Foco em <strong>crimes financeiros</strong>, <strong>fraudes complexas</strong> e
+          <strong>operações de inteligência</strong> com suíte <strong>i2</strong>.
+        </p>
+      </div>
+
+      <aside class="hero-panel">
+        <span class="badge">Visão SEEAI</span>
+        <h2>Investigar com contexto, não só com registros</h2>
+        <p>
+          Não basta ter dados: é preciso conectá-los em uma narrativa clara,
+          capaz de revelar vínculos, padrões, riscos e oportunidades.
+        </p>
+
+        <div class="network" aria-hidden="true">
+          <div class="network-logo">
+            <img src="img/seeai-logo.png" class="logo-network" alt="SEEAI no centro da rede">
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SESSÃO QUEM SOMOS -->
+    <section id="quem-somos" class="section-large">
+      <div class="two-column">
         <div>
-          <div class="hero-logo">
-            <!-- Logo grande no hero -->
-            <img src="img/seeai-logo.png"
-                 alt="Logotipo SEEAI - See beyond. See with intelligence."
-                 class="logo-hero" />
-          </div>
-
-          <h1 class="hero-title">
-            Inteligência investigativa e Data Hub<br />
-            para quem precisa <span class="hero-highlight">ver além dos dados</span>.
-          </h1>
-
-          <p class="hero-subtitle">
-            A SEEAI é uma empresa especializada em inteligência investigativa, representante e integradora da suíte i2.
-            Conectamos fontes de dados, entregamos Data Hub, treinamos analistas e prestamos serviços
-            especializados de suporte e consultoria para operações de combate a crimes e fraudes.
+          <h2 class="section-title">Quem somos</h2>
+          <p class="section-sub large-sub">
+            A SEEAI é uma empresa especializada em inteligência investigativa e integração da suíte i2.
+            Transformamos dados dispersos em conhecimento acionável para tomada de decisão estratégica e operacional.
           </p>
 
-          <div class="hero-actions">
-            <a href="#contato" class="btn btn-primary">Agendar conversa</a>
-            <a href="#datahub" class="btn btn-secondary">Conhecer o SEEAI Data Hub</a>
-          </div>
-
-          <p class="hero-meta">
-            Atuação em <strong>inteligência, prevenção a fraudes, investigação criminal</strong> e
-            <strong>compliance</strong>, com foco na suíte <strong>IBM i2</strong>.
+          <p class="text-body">
+            Atuamos com equipes técnicas e de negócio para desenhar arquiteturas de dados,
+            pipelines de ingestão, modelos de entidades e conectores otimizados para
+            cenários de crimes financeiros, fraudes digitais, segurança pública e investigações corporativas.
           </p>
         </div>
 
-        <aside class="hero-panel">
-          <span class="badge">Visão SEEAI</span>
-          <h2>Investigar com contexto, não só com registros</h2>
+        <div>
+          <h3 class="section-title small">Missão, visão e valores</h3>
+          <ul class="list">
+            <li><strong>Missão:</strong> potencializar equipes de inteligência com tecnologia, dados e método.</li>
+            <li><strong>Visão:</strong> ser referência em Data Hub e serviços especializados para ambientes i2 na América Latina.</li>
+            <li><strong>Valores:</strong> ética, responsabilidade no uso de dados, transparência e foco em resultado operacional.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SESSÃO SERVIÇOS -->
+    <section id="servicos" class="section-large">
+      <h2 class="section-title">O que fazemos</h2>
+      <p class="section-sub large-sub">
+        Do planejamento à operação contínua: entregamos integração, Data Hub, consultoria,
+        sustentação e capacitação para ambientes i2 de alta criticidade.
+      </p>
+
+      <div class="grid-3 wide-grid">
+        <article class="card tall-card">
+          <h3>Integração da suíte i2</h3>
           <p>
-            Não basta ter dados. É preciso conectar pessoas, eventos, transações e padrões em uma visão única.
-            A SEEAI ajuda equipes de inteligência a transformar grandes volumes de informação em histórias
-            investigativas claras, rastreáveis e acionáveis.
+            Projetos de implantação e integração da suíte i2 com bancos de dados corporativos,
+            sistemas legados, APIs, data lakes e fontes externas.
           </p>
+          <p>
+            Desenhamos modelos de dados, mapeamos entidades e vínculos e criamos fluxos que
+            conectam o mundo operacional ao ambiente de análise.
+          </p>
+        </article>
 
-          <div class="network" aria-hidden="true">
-            <div class="network-logo">
-              <!-- Logo no centro da “rede” -->
-              <img src="img/seeai-logo.png"
-                   alt="SEEAI – logotipo com grafo no centro"
-                   class="logo-network" />
-            </div>
-          </div>
-        </aside>
-      </section>
+        <article class="card tall-card">
+          <h3>SEEAI Data Hub</h3>
+          <p>
+            Plataforma central para ingestão, normalização e distribuição de dados para o i2 e
+            outras ferramentas analíticas, com foco em investigações complexas.
+          </p>
+          <p>
+            Suporta múltiplas fontes, padrões de qualidade de dados e trilhas de auditoria.
+          </p>
+          <a href="datahub.html" class="pill link-pill">Ver detalhes do Data Hub</a>
+        </article>
 
-      <!-- QUEM SOMOS / MISSÃO / VALORES -->
-      <section id="quem-somos">
-        <div class="two-column">
-          <div>
-            <h2 class="section-title">Quem somos</h2>
-            <p class="section-sub">
-              A SEEAI nasce da experiência prática em operações de inteligência, prevenção a fraudes e investigação
-              de crimes complexos. Nosso objetivo é reduzir o tempo entre o “dado bruto” e a “decisão baseada em evidências”,
-              unindo tecnologia de ponta, método investigativo e conhecimento de negócio.
-            </p>
-            <p class="text-body">
-              Atuamos como parceiro estratégico de organizações que utilizam a suíte i2, ajudando a desenhar fluxos
-              de dados, modelos de entidades e rotinas de análise que realmente conversem com a realidade do analista:
-              casos em aberto, linhas de investigação, vínculos frágeis, hipóteses e necessidade de colaboração
-              entre times.
-            </p>
-          </div>
+        <article class="card tall-card">
+          <h3>Treinamento e suporte especializado</h3>
+          <p>
+            Programas de formação para analistas, administradores e equipes de TI
+            que operam a suíte i2 e o Data Hub SEEAI.
+          </p>
+          <p>
+            Inclui suporte contínuo, revisão de casos, apoio a operações sensíveis e boas práticas.
+          </p>
+        </article>
+      </div>
+    </section>
 
-          <div>
-            <h3 class="section-title small">Missão, visão e valores</h3>
-            <ul class="list">
-              <li><strong>Missão:</strong> apoiar organizações públicas e privadas na produção de inteligência
-                qualificada, conectando dados dispersos para combater crimes, fraudes e riscos.</li>
-              <li><strong>Visão:</strong> ser referência em soluções de Data Hub e serviços especializados para
-                clientes que utilizam a suíte i2 na América Latina.</li>
-              <li><strong>Valores:</strong> ética nas investigações, responsabilidade no uso de dados,
-                parceria com o cliente, simplicidade na entrega e foco em resultado operacional.</li>
-            </ul>
-          </div>
+    <!-- BLOG -->
+    <section id="blog" class="section-large">
+      <h2 class="section-title">Blog & conteúdo</h2>
+      <p class="section-sub large-sub">
+        Em breve, publicaremos artigos, estudos de caso e materiais práticos sobre
+        inteligência investigativa, análise de vínculos e Data Hub para ambientes i2.
+      </p>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section-large">
+      <h2 class="section-title">Fale com a SEEAI</h2>
+      <p class="section-sub large-sub">
+        Conte um pouco sobre o seu contexto e retornaremos com uma proposta de conversa técnica
+        ou demonstração do SEEAI Data Hub integrado ao i2.
+      </p>
+
+      <div class="two-column">
+
+        <!-- FORMULÁRIO COM FORMSUBMIT -->
+        <form class="contact-form"
+      action="https://formsubmit.co/valdir.jacintho@seeaidata.com.br"
+      method="POST">
+
+  <!-- Configurações básicas do FormSubmit -->
+  <input type="hidden" name="_subject" value="Nova mensagem enviada pelo site SEEAI">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <!-- Redireciona para a página de obrigado depois do envio -->
+  <input type="hidden" name="_next" value="https://www.seeaidata.com.br/obrigado.html">
+
+  <label for="nome">Nome*</label>
+  <input id="nome" name="name" type="text" required />
+
+  <label for="email">E-mail corporativo*</label>
+  <input id="email" name="email" type="email" required />
+
+  <label for="org">Organização</label>
+  <input id="org" name="organization" type="text" />
+
+  <label for="msg">Mensagem*</label>
+  <textarea id="msg" name="message" rows="6" required></textarea>
+
+  <button type="submit" class="btn btn-primary full-btn">
+    Enviar mensagem
+  </button>
+
+  <p class="form-note">
+    Retornamos normalmente em até 1 dia útil.
+  </p>
+</form>
+
+        <div>
+          <h3 class="section-title small">Informações institucionais</h3>
+          <ul class="list">
+            <li>Atendimento para Brasil e América Latina.</li>
+            <li>Projetos para governo, bancos, fintechs e áreas de compliance.</li>
+            <li>Integração com ambientes on-premises ou em nuvem.</li>
+            <li>Parceria de longo prazo para evolução do ambiente i2.</li>
+          </ul>
         </div>
-      </section>
-
-      <!-- SERVIÇOS -->
-      <section id="servicos">
-        <h2 class="section-title">O que fazemos</h2>
-        <p class="section-sub">
-          A SEEAI oferece um portfólio completo para ambientes que utilizam i2: integração, arquitetura de dados,
-          Data Hub, capacitação de equipes e suporte especializado para operações contínuas.
-        </p>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Integração da suíte i2</h3>
-            <p>
-              Planejamento e implantação de ambientes i2 integrados a bancos de dados corporativos,
-              sistemas legados, APIs e fontes externas. Configuramos conectores, modelos de dados
-              e regras de ingestão para garantir fluxo contínuo de informação.
-            </p>
-            <span class="pill">Projetos i2</span>
-          </article>
-
-          <article class="card" id="datahub">
-            <h3>SEEAI Data Hub</h3>
-            <p>
-              Plataforma de integração de dados que centraliza informações estruturadas e não estruturadas
-              para consumo pelo i2 e outras ferramentas analíticas. Ideal para fraudes, crime organizado,
-              inteligência financeira e investigações corporativas.
-            </p>
-            <a href="datahub.html" class="pill link-pill">Saiba mais sobre o Data Hub</a>
-          </article>
-
-          <article class="card">
-            <h3>Treinamento e suporte especializado</h3>
-            <p>
-              Programas de treinamento para novos usuários e analistas experientes de i2, focados em casos reais.
-              Oferecemos sustentação remota, revisão de casos complexos, apoio a operações sensíveis
-              e monitoria de boas práticas de uso.
-            </p>
-            <span class="pill">Capacitação contínua</span>
-          </article>
-        </div>
-      </section>
-
-      <!-- BLOG (placeholder) -->
-      <section id="blog">
-        <h2 class="section-title">Blog & conteúdo</h2>
-        <p class="section-sub">
-          Em breve, a SEEAI irá compartilhar artigos, estudos de caso e boas práticas sobre i2,
-          análise de vínculos, investigação digital e Data Hub para inteligência.
-        </p>
-      </section>
-
-      <!-- CONTATO -->
-      <section id="contato">
-        <h2 class="section-title">Fale com a SEEAI</h2>
-        <p class="section-sub">
-          Conte um pouco sobre o seu contexto de investigação, prevenção a fraudes ou uso de i2
-          e retornaremos com uma proposta de conversa técnica ou demonstração do ambiente.
-        </p>
-
-        <div class="two-column">
-          <form class="contact-form">
-            <label for="nome">Nome*</label>
-            <input id="nome" type="text" required />
-
-            <label for="email">E-mail corporativo*</label>
-            <input id="email" type="email" required />
-
-            <label for="org">Organização</label>
-            <input id="org" type="text" />
-
-            <label for="msg">Mensagem</label>
-            <textarea id="msg" rows="4"></textarea>
-
-            <button type="submit" class="btn btn-primary full-btn">
-              Enviar mensagem
-            </button>
-            <p class="form-note">
-              *Formulário ilustrativo – conecte ao seu backend, CRM ou e-mail.
-            </p>
-          </form>
-
-          <div>
-            <h3 class="section-title small">Informações institucionais</h3>
-            <ul class="list">
-              <li>Atendimento a clientes em todo o Brasil e América Latina.</li>
-              <li>Projetos dedicados para órgãos de segurança, bancos, fintechs e áreas de compliance.</li>
-              <li>Modelos de contratação por projeto, horas de consultoria ou assinatura de serviços.</li>
-              <li>Integração com ambientes on-premises ou em nuvem, de acordo com a sua realidade.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <!-- RODAPÉ -->
     <footer>
-      © <span id="year"></span> <strong>SEEAI</strong> · Inteligência investigativa, Data Hub e serviços especializados para ambientes i2.
+      © <span id="year"></span> SEEAI · Inteligência investigativa & Data Hub.
     </footer>
-  </div> <!-- fim .content-wrapper -->
+  </div>
 
-  <!-- SCRIPT: ANO DO RODAPÉ + FUNDO ANIMADO -->
+  <!-- SCRIPT: ANO + ANIMAÇÃO DE FUNDO -->
   <script>
-    // ano no rodapé
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // fundo animado de pontos e conexões
     const canvas = document.getElementById("network-bg");
     const ctx = canvas.getContext("2d");
 
@@ -231,6 +232,7 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
+
     resize();
     window.addEventListener("resize", resize);
 
@@ -249,16 +251,15 @@
         });
       }
     }
+
     initNodes();
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // fundo escuro
       ctx.fillStyle = "rgba(5, 13, 31, 1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // nós
       nodes.forEach(node => {
         node.x += node.vx;
         node.y += node.vy;
@@ -271,16 +272,14 @@
         ctx.fillStyle = "#1ea4ff";
         ctx.fill();
 
-        // alguns nós em vermelho aleatório
-        if (Math.random() < 0.002) {
+        if (Math.random() < 0.003) {
           ctx.beginPath();
-          ctx.arc(node.x, node.y, 3.5, 0, Math.PI * 2);
+          ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
           ctx.fillStyle = "#e6323a";
           ctx.fill();
         }
       });
 
-      // conexões
       for (let a = 0; a < NODE_COUNT; a++) {
         for (let b = a + 1; b < NODE_COUNT; b++) {
           const dx = nodes[a].x - nodes[b].x;
@@ -303,5 +302,6 @@
 
     animate();
   </script>
+
 </body>
 </html>
