@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <canvas id="network-bg"></canvas>
 
   <div class="content-wrapper">
+
     <header>
       <div class="nav-inner">
         <a href="index.html#top" class="brand">
@@ -20,15 +22,13 @@
       </div>
     </header>
 
-    <main class="obrigado-container">
-      <h1 class="obrigado-title">Obrigado pela mensagem! ✅</h1>
-      <p class="obrigado-text">
-        Recebemos sua mensagem e em breve alguém da SEEAI entrará em contato
-        pelo e-mail informado. Se a demanda for urgente, você pode reenviar
-        com a indicação de prioridade no campo de mensagem.
+    <main class="section-large section-block alt2" style="min-height:70vh; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center;">
+      <h1 class="section-title">Obrigado pela mensagem! ✅</h1>
+      <p class="section-sub" style="max-width:30rem;">
+        Sua mensagem foi enviada com sucesso. Em breve retornaremos pelo e-mail informado.
       </p>
 
-      <a href="index.html#top" class="btn btn-primary">
+      <a href="index.html#top" class="btn btn-primary" style="margin-top:1.5rem;">
         Voltar ao site
       </a>
     </main>
@@ -72,7 +72,6 @@
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       ctx.fillStyle = "rgba(5, 13, 31, 1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -103,21 +102,4 @@
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < MAX_DISTANCE) {
-            ctx.strokeStyle = "rgba(30, 164, 255," + (1 - dist / MAX_DISTANCE) + ")";
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(nodes[a].x, nodes[a].y);
-            ctx.lineTo(nodes[b].x, nodes[b].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-  </script>
-
-</body>
-</html>
+            ctx.strokeStyle = "rgba(30, 164, 255," + (1 - dist / MAX_DISTANCE) +
