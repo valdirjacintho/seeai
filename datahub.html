@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>SEEAI Data Hub – Integração, vínculos e investigações avançadas</title>
+  <title>SEEAI Data Hub – Integração, ingestão e inteligência investigativa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,15 +12,30 @@
   <!-- Fundo animado -->
   <canvas id="network-bg"></canvas>
 
+  <!-- Botão flutuante WhatsApp (premium) -->
+  <a href="https://wa.me/5511978596000" target="_blank" class="whatsapp-float" aria-label="WhatsApp SEEAI">
+    <span class="whatsapp-float__ring" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.5 3.5A11 11 0 1 0 3.6 20.4L2 22l.5-2
+               A11 11 0 0 0 20.5 3.5z"></path>
+      <path d="M16.2 13.9c-.2-.1-1.2-.6-1.4-.7
+               -.2-.1-.4-.1-.5.1
+               -.1.2-.6.7-.7.8
+               -.1.1-.3.1-.5 0
+               -.3-.1-1-.4-2-1.2
+               -.8-.7-1.3-1.5-1.4-1.8
+               -.1-.3 0-.4.1-.5"></path>
+    </svg>
+  </a>
+
   <div class="content-wrapper">
 
     <!-- HEADER -->
     <header>
       <div class="nav-inner">
-
-        <a href="index.html" class="brand">
+        <a href="index.html#top" class="brand">
           <img src="img/seeai-logo.png" alt="Logotipo SEEAI" class="logo-small" />
-          <span class="brand-name">SEEAI</span>
+          <span class="brand-name">SEEAI DATA</span>
         </a>
 
         <nav aria-label="Navegação principal">
@@ -29,249 +44,338 @@
             <li><a href="index.html#servicos">Serviços</a></li>
             <li><a href="datahub.html">SEEAI Data Hub</a></li>
             <li><a href="index.html#blog">Blog</a></li>
-            <li><a href="index.html#contato">Contato</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-
       </div>
     </header>
 
-    <!-- HERO DATA HUB -->
-    <section class="hero">
-
+    <!-- HERO -->
+    <section class="hero" id="top">
       <div class="hero-left">
+
         <img src="img/seeai-logo.png" class="logo-hero" alt="SEEAI Logo">
 
         <h1 class="hero-title">
           SEEAI Data Hub<br>
-          <span class="hero-highlight">A camada que conecta e dá vida aos dados.</span>
+          <span class="hero-highlight">Integração e ingestão contínua</span> para investigação e antifraude.
         </h1>
 
         <p class="hero-subtitle">
-          O SEEAI Data Hub centraliza, transforma, padroniza e entrega dados diretamente
-          para o ecossistema i2, permitindo análises de vínculos, investigações rápidas
-          e criação de narrativas em ambientes de autenticidade e contexto.
+          O SEEAI Data Hub consolida dados dispersos, padroniza entidades, enriquece eventos
+          e entrega conectividade operacional para análises de vínculos no ecossistema i2.
         </p>
 
         <div class="hero-actions">
-          <a href="index.html#contato" class="btn btn-primary">Solicitar apresentação</a>
-          <a href="#caracteristicas" class="btn btn-secondary">Como funciona</a>
+          <a href="#contato" class="btn btn-primary">Solicitar demonstração</a>
+          <a href="index.html#servicos" class="btn btn-secondary">Ver serviços</a>
         </div>
+
       </div>
 
       <aside class="hero-panel">
-        <h2>Mais do que integração: inteligência de contexto</h2>
+        <span class="badge">Data Hub</span>
+        <h2>Dados normalizados e prontos para análise</h2>
         <p>
-          O Data Hub foi projetado para ambientes que precisam de velocidade,
-          consistência e precisão na ingestão de informações.
+          Da ingestão à visualização, com governança, rastreabilidade e modelos
+          estruturados para investigação e conformidade.
         </p>
 
         <div class="network">
           <div class="network-logo">
-            <img src="img/seeai-logo.png" class="logo-network">
+            <img src="img/seeai-logo.png" class="logo-network" alt="SEEAI Logo">
           </div>
         </div>
       </aside>
-
     </section>
 
-    <!-- BLOCO 1 - CARACTERÍSTICAS -->
-    <section id="caracteristicas" class="section-large section-block alt1">
+    <!-- BLOCO 1 - VISÃO GERAL -->
+    <section class="section-large section-block alt1" id="visao-geral">
+      <div class="two-column">
+        <div>
+          <h2 class="section-title">O que é o SEEAI Data Hub</h2>
+          <p class="section-sub">
+            Um hub de dados voltado a investigação, antifraude e inteligência: conecta fontes,
+            normaliza entidades e eventos e prepara o ambiente para análise de vínculos.
+          </p>
 
-      <h2 class="section-title">Características principais</h2>
+          <p class="text-body">
+            O Data Hub reduz tempo de integração, melhora qualidade e padronização de dados,
+            acelera hipóteses investigativas e viabiliza governança sobre entidades críticas
+            (pessoas, contas, dispositivos, localizações, transações, eventos).
+          </p>
+        </div>
+
+        <div>
+          <h3 class="section-title small">Benefícios principais</h3>
+          <ul class="list">
+            <li><strong>Tempo:</strong> acelera ingestão, integração e disponibilização de dados.</li>
+            <li><strong>Qualidade:</strong> padronização e enriquecimento de entidades e eventos.</li>
+            <li><strong>Risco:</strong> melhora detecção de padrões, vínculos e comportamentos.</li>
+            <li><strong>Governança:</strong> rastreabilidade e consistência para auditoria e compliance.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 2 - CAPACIDADES -->
+    <section class="section-large section-block alt2" id="capacidades">
+      <h2 class="section-title">Capacidades</h2>
       <p class="section-sub">
-        Criado para ambientes investigativos complexos, de alta demanda e alto volume.
+        Componentes essenciais para transformação, enriquecimento e entrega de dados
+        para ambientes investigativos.
       </p>
 
-      <div class="grid-3">
-
+      <div class="grid-3 wide-grid">
         <article class="card tall-card">
-          <h3>Ingestão contínua</h3>
+          <h3>Ingestão e conectores</h3>
           <p>
-            Conectores automatizados permitem ingestão constante de entidades e eventos,
-            mantendo gráficos atualizados em tempo real.
+            Conectividade com bancos, APIs, arquivos e integrações corporativas.
+            Fluxos de ingestão em batch ou streaming.
           </p>
         </article>
 
         <article class="card tall-card">
-          <h3>Modelo de entidades</h3>
+          <h3>Normalização e entidades</h3>
           <p>
-            Padronização automática garante consistência entre diferentes fontes,
-            facilitando correlações e análises profundas.
+            Padronização de entidades e eventos (pessoas, contas, dispositivos, transações),
+            com chaves, deduplicação e regras de qualidade.
           </p>
         </article>
 
         <article class="card tall-card">
-          <h3>Scripts de transformação</h3>
+          <h3>Enriquecimento e contexto</h3>
           <p>
-            Aplicação de regras, normalização, enriquecimento e limpeza dos dados
-            antes de chegar ao i2.
+            Regras de enriquecimento, scoring, atributos derivados e contextualização
+            para acelerar hipóteses investigativas.
           </p>
         </article>
-
-        <article class="card tall-card">
-          <h3>Detecção de vínculos</h3>
-          <p>
-            Correlação automática baseada em relacionamentos lógicos e operacionais,
-            gerando conexões entre pessoas, empresas, eventos e objetos.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Arquitetura modular</h3>
-          <p>
-            Pode operar em cloud, on-premises ou híbrido, com pipelines customizáveis.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Compatível com o ecossistema i2</h3>
-          <p>
-            Preparado nativamente para ingestion e integração com i2 Analyst’s Notebook
-            e i2 iBase.
-          </p>
-        </article>
-
       </div>
-
     </section>
 
-    <!-- BLOCO 2 - BENEFÍCIOS -->
-    <section class="section-large section-block alt2">
-
-      <h2 class="section-title">Benefícios</h2>
-      <p class="section-sub">
-        Redução de complexidade, aumento de precisão e aceleração do ciclo operacional.
-      </p>
-
-      <div class="grid-3">
-
-        <article class="card tall-card">
-          <h3>Velocidade operacional</h3>
-          <p>
-            Reduz semanas de coleta manual para minutos, permitindo ciclos rápidos de investigação.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Menos ruído, mais contexto</h3>
-          <p>
-            Dados consolidados eliminam inconsistências e duplicações.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Aumento da assertividade</h3>
-          <p>
-            Reduz falsos positivos e aprimora o foco de risco.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Economia de recursos</h3>
-          <p>
-            Reduz retrabalho e horas de processamento repetitivo.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Escalável</h3>
-          <p>
-            Cresce conforme sua operação, suporte a novas fontes e regras.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Segurança e controle</h3>
-          <p>
-            Controles de acesso e auditabilidade para ambientes sensíveis.
-          </p>
-        </article>
-
-      </div>
-
-    </section>
-
-    <!-- BLOCO 3 – CASOS DE USO -->
-    <section class="section-large section-block alt1">
-
+    <!-- BLOCO 3 - CASOS DE USO -->
+    <section class="section-large section-block alt1" id="casos-de-uso">
       <h2 class="section-title">Casos de uso</h2>
       <p class="section-sub">
-        Aplicações práticas do SEEAI Data Hub em ambientes reais.
+        Projetado para cenários de fraude, crimes financeiros e investigações corporativas
+        com forte dependência de vínculos e comportamento.
       </p>
 
-      <div class="grid-3">
-
+      <div class="grid-3 wide-grid">
         <article class="card tall-card">
-          <h3>Fraude corporativa</h3>
+          <h3>Antifraude e transações</h3>
           <p>
-            Identificação de padrões suspeitos entre fornecedores, pagamentos,
-            funcionários e transações.
+            Identificação de padrões, vínculos e clusters suspeitos em transações,
+            contas, dispositivos e localizações.
           </p>
         </article>
 
         <article class="card tall-card">
-          <h3>Crime financeiro</h3>
+          <h3>Crimes financeiros</h3>
           <p>
-            Correlação automatizada entre eventos, contas, empresas e envolvidos.
+            Estruturação e análise de entidades e eventos para rastreamento de fluxos,
+            redes e intermediários.
           </p>
         </article>
 
         <article class="card tall-card">
-          <h3>Compliance e auditoria</h3>
+          <h3>Investigações corporativas</h3>
           <p>
-            Acompanhamento contínuo da higidez dos processos e indicadores de risco.
+            Conexão entre pessoas, empresas, contratos e evidências,
+            com rastreabilidade e governança.
           </p>
         </article>
-
-        <article class="card tall-card">
-          <h3>Investigação pública</h3>
-          <p>
-            Integração de bases públicas, denúncias e sistemas internos.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Análise de comportamento</h3>
-          <p>
-            Identificação de desvios e padrões atípicos no ciclo de eventos.
-          </p>
-        </article>
-
-        <article class="card tall-card">
-          <h3>Inteligência de vínculos</h3>
-          <p>
-            Construção automática de grafos que revelam relações críticas.
-          </p>
-        </article>
-
       </div>
-
     </section>
 
-    <!-- BLOCO 4 – CALL TO ACTION -->
-    <section class="section-large section-block alt3">
+    <!-- BLOCO 4 - COMO ENTREGAMOS -->
+    <section class="section-large section-block alt2" id="metodologia">
+      <div class="two-column">
+        <div>
+          <h2 class="section-title">Como entregamos</h2>
+          <p class="section-sub">
+            Implantação orientada a resultado: do desenho do modelo de dados à operação,
+            com suporte, documentação e capacitação.
+          </p>
 
-      <h2 class="section-title">Quer ver o Data Hub funcionando ao vivo?</h2>
+          <ul class="list">
+            <li><strong>1) Diagnóstico:</strong> fontes, qualidade, riscos e objetivos investigativos.</li>
+            <li><strong>2) Modelagem:</strong> entidades, eventos, atributos e regras de vínculo.</li>
+            <li><strong>3) Integração:</strong> pipelines, conectores, normalização e governança.</li>
+            <li><strong>4) Operação:</strong> suporte, ajustes finos e treinamento.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="section-title small">Alinhamento com i2</h3>
+          <p class="section-sub" style="margin-bottom:0;">
+            O Data Hub é construído para facilitar o consumo por ferramentas de análise
+            de vínculos, garantindo consistência de entidades e rastreabilidade de evidências.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 5 - CONTATO (mesmo padrão do index) -->
+    <section id="contato" class="section-large section-block alt3">
+      <h2 class="section-title">Contato</h2>
       <p class="section-sub">
-        Podemos demonstrar ingestão, modelagem de entidades, transformação e exibição no i2.
+        Solicite uma demonstração do SEEAI Data Hub ou fale com um especialista.
       </p>
 
-      <div class="hero-actions">
-        <a href="index.html#contato" class="btn btn-primary">Solicitar demonstração</a>
-        <a href="index.html" class="btn btn-secondary">Voltar ao site</a>
-      </div>
+      <div class="two-column">
 
+        <!-- FORMULÁRIO -->
+        <form class="contact-form"
+              action="https://script.google.com/macros/s/AKfycbxCF6YKVuxBnIha5T504vrJXnzEMfhh_y2KzW88ejnf9VerBnwmDnGpl0Wh7CGLG7mo4g/exec"
+              method="POST">
+
+          <label for="nome">Nome*</label>
+          <input id="nome" name="name" type="text" required />
+
+          <label for="email">E-mail corporativo*</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="org">Organização</label>
+          <input id="org" name="organization" type="text" />
+
+          <label for="msg">Mensagem*</label>
+          <textarea id="msg" name="message" rows="6" required></textarea>
+
+          <button type="submit" class="btn btn-primary full-btn">
+            Enviar mensagem
+          </button>
+
+          <p class="form-note">
+            Retornamos normalmente em até 1 dia útil.
+          </p>
+        </form>
+
+        <!-- CONTATOS + INSTITUCIONAL -->
+        <div class="contact-right">
+
+          <div class="contact-card-panel">
+            <h3 class="section-title small">Contato institucional</h3>
+
+            <div class="contact-cards" role="list">
+
+              <a class="contact-item" role="listitem" href="https://www.seeaidata.com.br" target="_blank" aria-label="Abrir site SEEAI Data">
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M3 12h18"></path>
+                    <path d="M12 3c3 3 3 15 0 18"></path>
+                    <path d="M12 3c-3 3-3 15 0 18"></path>
+                  </svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">Site</span>
+                  <span class="contact-value">www.seeaidata.com.br</span>
+                </span>
+              </a>
+
+              <a class="contact-item" role="listitem" href="tel:+5511978596000" aria-label="Ligar para SEEAI Data">
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M22 16.9v2a2 2 0 0 1-2.2 2
+                             19.8 19.8 0 0 1-8.6-3
+                             19.5 19.5 0 0 1-6-6
+                             19.8 19.8 0 0 1-3-8.6
+                             A2 2 0 0 1 4.1 1h2
+                             a2 2 0 0 1 2 1.7
+                             c.1.9.3 1.8.6 2.6
+                             a2 2 0 0 1-.4 2.1L7.5 10
+                             a16 16 0 0 0 6.5 6.5
+                             l.6-.8
+                             a2 2 0 0 1 2.1-.4
+                             c.8.3 1.7.5 2.6.6
+                             a2 2 0 0 1 1.7 2z"/>
+                  </svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">Telefone</span>
+                  <span class="contact-value">+55 11 97859-6000</span>
+                </span>
+              </a>
+
+              <a class="contact-item" role="listitem" href="https://wa.me/5511978596000" target="_blank" aria-label="Abrir WhatsApp SEEAI Data">
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20.5 3.5A11 11 0 1 0 3.6 20.4L2 22l.5-2
+                             A11 11 0 0 0 20.5 3.5z"></path>
+                    <path d="M16.2 13.9c-.2-.1-1.2-.6-1.4-.7
+                             -.2-.1-.4-.1-.5.1
+                             -.1.2-.6.7-.7.8
+                             -.1.1-.3.1-.5 0
+                             -.3-.1-1-.4-2-1.2
+                             -.8-.7-1.3-1.5-1.4-1.8
+                             -.1-.3 0-.4.1-.5"></path>
+                  </svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">WhatsApp</span>
+                  <span class="contact-value">Atendimento imediato</span>
+                </span>
+              </a>
+
+              <a class="contact-item" role="listitem" href="mailto:comercial@seeaidata.com.br" aria-label="Enviar e-mail para SEEAI Data">
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M3 7l9 6 9-6"></path>
+                  </svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">E-mail</span>
+                  <span class="contact-value">comercial@seeaidata.com.br</span>
+                </span>
+              </a>
+
+              <a class="contact-item" role="listitem" href="https://www.linkedin.com/company/seeaidata" target="_blank" aria-label="Abrir LinkedIn SEEAI Data">
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="3"></rect>
+                    <path d="M7.5 10.5V17"></path>
+                    <path d="M7.5 7.5v.01"></path>
+                    <path d="M11 10.5V17"></path>
+                    <path d="M15 12.5V17"></path>
+                  </svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">/company/seeaidata</span>
+                </span>
+              </a>
+
+            </div>
+          </div>
+
+          <div class="institutional-panel">
+            <h3 class="section-title small">Informações institucionais</h3>
+            <ul class="list institutional-list">
+              <li>Atendimento para Brasil e América Latina.</li>
+              <li>Projetos governamentais, corporativos e compliance.</li>
+              <li>Consultoria especializada em ecossistema i2.</li>
+              <li>Integração com nuvem ou infraestrutura própria.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
     <!-- RODAPÉ -->
     <footer>
-      © <span id="year"></span> SEEAI · Inteligência investigativa & Data Hub.
+      © <span id="year"></span> SEEAI DATA · Inteligência investigativa & Data Hub.<br>
+      <small>
+        www.seeaidata.com.br · comercial@seeaidata.com.br · +55 11 97859-6000
+      </small>
     </footer>
 
   </div>
 
-  <!-- SCRIPT: ANO + FUNDO ANIMADO -->
+  <!-- SCRIPT: ano + animação (preservado) -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 

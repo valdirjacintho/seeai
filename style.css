@@ -177,6 +177,30 @@ nav a:hover::after {
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.55);
 }
 
+.hero-panel h2 {
+  margin-top: 0.6rem;
+  font-size: 1.15rem;
+}
+
+.hero-panel p {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: rgba(30, 164, 255, 0.12);
+  border: 1px solid rgba(30, 164, 255, 0.22);
+  color: var(--white);
+}
+
 .network {
   margin-top: 1.4rem;
   border-radius: 1rem;
@@ -194,6 +218,7 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
 }
+
 .logo-network {
   height: 125px;
 }
@@ -233,6 +258,13 @@ nav a:hover::after {
   color: var(--white);
 }
 
+/* full width button inside forms */
+.full-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
 /* SEÇÕES PADRÃO */
 .section-large {
   max-width: 1380px;
@@ -243,6 +275,12 @@ nav a:hover::after {
 .section-title {
   font-size: 1.9rem;
   margin-bottom: 1rem;
+}
+
+.section-title.small {
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .section-sub {
@@ -287,6 +325,45 @@ nav a:hover::after {
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
 }
 
+.tall-card h3 {
+  margin-bottom: 0.7rem;
+}
+
+.tall-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* pill link (used in services) */
+.pill {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(30, 164, 255, 0.22);
+  background: rgba(30, 164, 255, 0.08);
+  color: var(--white);
+}
+
+.pill:hover {
+  border-color: rgba(30, 164, 255, 0.45);
+  background: rgba(30, 164, 255, 0.12);
+}
+
+/* LISTAS */
+.list {
+  list-style: none;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.list strong {
+  color: var(--white);
+}
+
 /* FORMULÁRIO */
 .contact-form {
   background: radial-gradient(circle at top left, #162952, #0c1b36 70%);
@@ -298,6 +375,8 @@ nav a:hover::after {
 .contact-form label {
   font-size: 0.85rem;
   margin-top: 1rem;
+  display: block;
+  color: var(--white);
 }
 
 .contact-form input,
@@ -316,8 +395,13 @@ nav a:hover::after {
   resize: vertical;
 }
 
-/* --- 🔵 BLOCOS HORIZONTAIS --- */
+.form-note {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
 
+/* --- 🔵 BLOCOS HORIZONTAIS --- */
 .section-block {
   padding: 7rem 2rem;
   position: relative;
@@ -363,4 +447,228 @@ footer {
   color: var(--muted);
   font-size: 0.82rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+footer small {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: rgba(196, 209, 230, 0.9);
+}
+
+/* ============================
+   CONTACT: RIGHT COLUMN PANELS
+   ============================ */
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Alinha a coluna direita com “feel” do hero-panel */
+.contact-card-panel {
+  background: radial-gradient(circle at top, #132a54, #0c1b36 60%);
+  border: 1px solid var(--border);
+  border-radius: 1.4rem;
+  padding: 2rem 2.2rem;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.55);
+}
+
+/* grid horizontal / responsivo */
+.contact-cards {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.95rem;
+}
+
+/* em telas maiores vira 2 colunas (cards horizontais) */
+@media (min-width: 980px) {
+  .contact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  padding: 1.05rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(23, 39, 67, 0.9);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 9, 22, 0.55),
+    rgba(12, 27, 54, 0.55)
+  );
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(30, 164, 255, 0.55);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 18, 38, 0.6),
+    rgba(12, 27, 54, 0.75)
+  );
+}
+
+.icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, rgba(30,164,255,0.18), rgba(0,0,0,0));
+  border: 1px solid rgba(30,164,255,0.22);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.contact-item:hover .icon-wrap {
+  transform: scale(1.03);
+  border-color: rgba(30,164,255,0.45);
+  background: radial-gradient(circle at 30% 30%, rgba(30,164,255,0.26), rgba(0,0,0,0));
+}
+
+.icon-wrap svg {
+  width: 22px;
+  height: 22px;
+  stroke: #ffffff; /* nítido (branco) */
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.45));
+  opacity: 0.98;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.contact-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-value {
+  font-size: 0.98rem;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-item,
+.contact-item:visited {
+  color: var(--white);
+}
+
+/* Institucional abaixo dos contatos */
+.institutional-panel {
+  background: radial-gradient(circle at top left, #162952, #0c1b36 70%);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+}
+
+.institutional-list {
+  margin-top: 0.8rem;
+}
+
+.institutional-list li {
+  margin-bottom: 0.55rem;
+}
+
+/* ============================
+   MONOCHROME MODE (PDF / PPT)
+   Use: add class "mono" to .contact-card-panel and/or .institutional-panel
+   ============================ */
+
+.contact-card-panel.mono,
+.institutional-panel.mono {
+  background: #0c1b36;
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: none;
+}
+
+.contact-card-panel.mono .contact-item {
+  background: rgba(0,0,0,0.18);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: none;
+}
+
+.contact-card-panel.mono .icon-wrap {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: none;
+}
+
+.contact-card-panel.mono .icon-wrap svg {
+  stroke: #ffffff;
+  filter: none;
+}
+
+.contact-card-panel.mono .contact-label {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ============================
+   WhatsApp floating button (premium/consistent)
+   ============================ */
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background: rgba(12, 27, 54, 0.78);
+  border: 1px solid rgba(30,164,255,0.28);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+  border-color: rgba(30,164,255,0.55);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+
+.whatsapp-float svg {
+  width: 26px;
+  height: 26px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.45));
+  opacity: 0.98;
+}
+
+/* halo ring */
+.whatsapp-float__ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(30,164,255,0.18), rgba(0,0,0,0) 70%);
+  pointer-events: none;
 }
