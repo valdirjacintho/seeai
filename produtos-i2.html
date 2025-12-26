@@ -4,18 +4,10 @@
   <meta charset="UTF-8" />
   <title>Produtos i2 | SEEAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <meta name="description" content="Conheça os produtos i2: i2 Analyst’s Notebook, iBase, Analysis Hub, Analysis Studio e TextChart. A SEEAI integra, implanta, treina e dá suporte especializado ao ecossistema i2." />
-  <meta name="keywords" content="i2, i2 Analyst's Notebook, iBase, Analysis Hub, Analysis Studio, i2 TextChart, análise de vínculos, investigação, inteligência, antifraude, OSINT, data hub, SEEAI" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://www.seeaidata.com.br/produtos-i2.html" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Fundo animado (mantém padrão do site) -->
   <canvas id="network-bg"></canvas>
 
   <div class="content-wrapper">
@@ -29,7 +21,8 @@
           <span class="brand-name">SEEAI</span>
         </a>
 
-        <nav aria-label="Navegação principal">
+        <!-- NAV DESKTOP -->
+        <nav class="nav-desktop" aria-label="Navegação principal">
           <ul>
             <li><a href="index.html#quem-somos">Quem somos</a></li>
             <li><a href="index.html#servicos">Serviços</a></li>
@@ -40,10 +33,50 @@
           </ul>
         </nav>
 
+        <!-- BOTÃO MOBILE -->
+        <button class="nav-toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="mobile-nav"
+                aria-expanded="false">
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+
       </div>
+
+      <!-- NAV MOBILE -->
+      <div id="mobile-nav" class="nav-mobile" aria-hidden="true">
+        <div class="nav-mobile-inner">
+          <div class="nav-mobile-top">
+            <span class="nav-mobile-title">Menu</span>
+            <button class="nav-close" type="button" aria-label="Fechar menu">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <a href="index.html#quem-somos" class="nav-mobile-link">Quem somos</a>
+          <a href="index.html#servicos" class="nav-mobile-link">Serviços</a>
+          <a href="datahub.html" class="nav-mobile-link">SEEAI Data Hub</a>
+          <a href="produtos-i2.html" class="nav-mobile-link is-active">Produtos i2</a>
+          <a href="index.html#blog" class="nav-mobile-link">Blog</a>
+          <a href="index.html#contato" class="nav-mobile-link">Contato</a>
+
+          <!-- SUBITENS (âncoras) -->
+          <div class="nav-mobile-section">
+            <div class="nav-mobile-section-title">Produtos</div>
+            <a href="#analysts-notebook" class="nav-mobile-sublink" data-sub="analysts-notebook">Analyst’s Notebook</a>
+            <a href="#ibase" class="nav-mobile-sublink" data-sub="ibase">iBase</a>
+            <a href="#analysis-hub" class="nav-mobile-sublink" data-sub="analysis-hub">Analysis Hub</a>
+            <a href="#analysis-studio" class="nav-mobile-sublink" data-sub="analysis-studio">Analysis Studio</a>
+            <a href="#textchart" class="nav-mobile-sublink" data-sub="textchart">TextChart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-overlay" aria-hidden="true"></div>
     </header>
 
-    <!-- HERO (PRODUTOS) -->
+    <!-- HERO -->
     <section class="product-hero" id="top">
       <div class="product-hero-inner">
         <div class="product-hero-left">
@@ -85,7 +118,7 @@
       </div>
     </section>
 
-    <!-- FAIXA 1 - Analyst's Notebook -->
+    <!-- FAIXAS -->
     <section class="product-band band-a" id="analysts-notebook">
       <div class="product-band-inner">
         <div class="product-band-left">
@@ -131,14 +164,13 @@
             <ul class="list">
               <li>Redução do tempo para transformar dados em inteligência acionável.</li>
               <li>Visualizações coesas para acelerar decisões e ações.</li>
-              <li>Base sólida para colaboração quando integrado a repositórios/serviços corporativos.</li>
+              <li>Base sólida para colaboração quando integrado a camadas corporativas.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAIXA 2 - iBase -->
     <section class="product-band band-b" id="ibase">
       <div class="product-band-inner">
         <div class="product-band-left">
@@ -173,7 +205,7 @@
           <div class="product-card">
             <h3>Quando usar</h3>
             <ul class="list">
-              <li>Repositório investigativo compartilhado (equipes e turnos).</li>
+              <li>Repositório investigativo compartilhado.</li>
               <li>Padronização de entidades e governança de dados.</li>
               <li>Integração de dados para apoiar análises recorrentes.</li>
             </ul>
@@ -183,15 +215,14 @@
             <h3>Diferenciais</h3>
             <ul class="list">
               <li>Integração com Analyst’s Notebook para exploração e disseminação.</li>
-              <li>Conectividade com SIG (GIS) para análises geográficas (conforme ambiente).</li>
               <li>Modelo de dados flexível para evolução operacional.</li>
+              <li>Base sólida para consistência investigativa em escala.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAIXA 3 - Analysis Hub -->
     <section class="product-band band-a" id="analysis-hub">
       <div class="product-band-inner">
         <div class="product-band-left">
@@ -208,7 +239,7 @@
             </div>
             <div class="bullet">
               <h3>Web + desktop</h3>
-              <p>Opções para consumir e explorar dados via navegador e também no ambiente avançado de desktop.</p>
+              <p>Opções para consumir e explorar dados via navegador e também em ambiente analítico avançado.</p>
             </div>
             <div class="bullet">
               <h3>Colaboração e escala</h3>
@@ -244,7 +275,6 @@
       </div>
     </section>
 
-    <!-- FAIXA 4 - Analysis Studio -->
     <section class="product-band band-b" id="analysis-studio">
       <div class="product-band-inner">
         <div class="product-band-left">
@@ -264,8 +294,8 @@
               <p>Reduz tempo de cruzamento e normalização ao apoiar buscas em múltiplas fontes com fluidez.</p>
             </div>
             <div class="bullet">
-              <h3>Repositório e colaboração</h3>
-              <p>Organização e compartilhamento de inteligência com controle de acesso e governança.</p>
+              <h3>Colaboração e governança</h3>
+              <p>Organização e compartilhamento de inteligência com controle de acesso e rastreabilidade.</p>
             </div>
           </div>
 
@@ -279,9 +309,9 @@
           <div class="product-card">
             <h3>Quando faz mais sentido</h3>
             <ul class="list">
-              <li>Equipes que precisam conectar e consultar fontes sob demanda.</li>
+              <li>Equipes que precisam consultar fontes sob demanda.</li>
               <li>Organizações que querem expandir consumo via web.</li>
-              <li>Operações com alta rotatividade e necessidade de padronização.</li>
+              <li>Operações com padronização e reuso de inteligência.</li>
             </ul>
           </div>
 
@@ -290,14 +320,13 @@
             <ul class="list">
               <li>Mais velocidade para enriquecer gráficos e hipóteses.</li>
               <li>Mais colaboração segura e reutilização de inteligência.</li>
-              <li>Escala operacional sem perder consistência investigativa.</li>
+              <li>Escala operacional com consistência investigativa.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAIXA 5 - TextChart -->
     <section class="product-band band-a" id="textchart">
       <div class="product-band-inner">
         <div class="product-band-left">
@@ -310,15 +339,15 @@
           <div class="product-bullets">
             <div class="bullet">
               <h3>NLP para entidades e vínculos</h3>
-              <p>Extrai automaticamente dezenas de entidades-chave (pessoas, organizações, datas, locais, crimes etc.).</p>
+              <p>Extrai automaticamente entidades-chave e relações para acelerar análises e validações.</p>
             </div>
             <div class="bullet">
               <h3>Multilíngue e multi-documento</h3>
-              <p>Processa grandes coleções de documentos e suporta centenas de idiomas, com consistência e repetibilidade.</p>
+              <p>Processa coleções de documentos e suporta múltiplos idiomas com repetibilidade.</p>
             </div>
             <div class="bullet">
               <h3>Menos tempo, mais precisão</h3>
-              <p>Reduz leitura manual e criação “um a um” de entidades, acelerando descobertas e validações.</p>
+              <p>Reduz leitura manual e criação “um a um”, aumentando velocidade e consistência.</p>
             </div>
           </div>
 
@@ -342,7 +371,7 @@
             <h3>Entrega típica</h3>
             <ul class="list">
               <li>Entidades e vínculos prontos para análise visual.</li>
-              <li>Estruturação para reduzir erro humano.</li>
+              <li>Estruturação com menos erro humano.</li>
               <li>Base para conexão com i2 e camadas de dados corporativas.</li>
             </ul>
           </div>
@@ -350,41 +379,39 @@
       </div>
     </section>
 
-    <!-- BLOCO DE CONTATO (aproveita o do index, apontando para lá) -->
     <section class="section-large section-block alt3">
-      <div class="section-inner">
-        <h2 class="section-title">Quer montar a melhor combinação para o seu cenário?</h2>
-        <p class="section-sub">
-          A SEEAI apoia desde prova de conceito até operação contínua: integração, conectores de dados, Data Hub,
-          treinamento e suporte especializado.
-        </p>
-        <div class="hero-actions">
-          <a href="index.html#contato" class="btn btn-primary">Falar com a SEEAI</a>
-          <a href="datahub.html" class="btn btn-secondary">Conhecer o Data Hub</a>
-        </div>
+      <h2 class="section-title">Quer montar a melhor combinação para o seu cenário?</h2>
+      <p class="section-sub">
+        A SEEAI apoia desde prova de conceito até operação contínua: integração, conectores de dados, Data Hub,
+        treinamento e suporte especializado.
+      </p>
+      <div class="hero-actions">
+        <a href="index.html#contato" class="btn btn-primary">Falar com a SEEAI</a>
+        <a href="datahub.html" class="btn btn-secondary">Conhecer o Data Hub</a>
       </div>
     </section>
 
-    <!-- RODAPÉ -->
     <footer>
       © <span id="year"></span> SEEAI · Inteligência investigativa & Data Hub.
     </footer>
 
   </div>
 
-  <!-- WhatsApp flutuante (mantém padrão; ajuste o href se quiser mensagem pronta) -->
   <a class="whatsapp-float"
      href="https://wa.me/5511978596000"
      target="_blank"
      rel="noopener noreferrer"
      aria-label="Fale conosco no WhatsApp">
-    <span class="wa-icon" aria-hidden="true"></span>
+    <span class="whatsapp-float__ring" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.04 2C6.58 2 2.14 6.44 2.14 11.9c0 1.74.46 3.44 1.34 4.95L2 22l5.26-1.38a9.86 9.86 0 004.78 1.22h.01c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.77 14.29c-.24.67-1.18 1.28-1.63 1.35-.41.06-.93.09-1.5-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.02-3.48-4.14-3.65-.12-.17-.99-1.32-.99-2.52 0-1.2.63-1.79.85-2.03.22-.24.48-.3.64-.3h.46c.15 0 .35-.06.55.42.2.48.7 1.67.76 1.79.06.12.1.26.02.42-.08.17-.12.26-.24.4-.12.14-.25.31-.35.42-.12.12-.25.26-.1.51.15.26.66 1.1 1.42 1.78.98.88 1.81 1.15 2.07 1.28.26.12.41.11.57-.07.16-.18.65-.76.83-1.02.18-.26.35-.22.59-.13.24.09 1.5.71 1.76.84.26.13.43.2.49.31.06.11.06.65-.18 1.32z"/>
+    </svg>
   </a>
 
-  <!-- SCRIPT: ano + animação -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    /* Canvas */
     const canvas = document.getElementById("network-bg");
     const ctx = canvas.getContext("2d");
 
@@ -457,8 +484,57 @@
 
       requestAnimationFrame(animate);
     }
-
     animate();
+
+    /* Mobile nav + destaque do subitem por hash */
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector(".nav-toggle");
+      const drawer = document.getElementById("mobile-nav");
+      const overlay = document.querySelector(".nav-overlay");
+      const closeBtn = document.querySelector(".nav-close");
+      const links = document.querySelectorAll(".nav-mobile-link, .nav-mobile-sublink");
+      const sublinks = document.querySelectorAll(".nav-mobile-sublink");
+
+      if (!toggle || !drawer || !overlay || !closeBtn) return;
+
+      function openNav() {
+        root.classList.add("nav-open");
+        toggle.setAttribute("aria-expanded", "true");
+        drawer.setAttribute("aria-hidden", "false");
+        overlay.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeNav() {
+        root.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+        drawer.setAttribute("aria-hidden", "true");
+        overlay.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      toggle.addEventListener("click", () => {
+        const isOpen = root.classList.contains("nav-open");
+        isOpen ? closeNav() : openNav();
+      });
+
+      closeBtn.addEventListener("click", closeNav);
+      overlay.addEventListener("click", closeNav);
+      links.forEach(a => a.addEventListener("click", closeNav));
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeNav(); });
+
+      function markSubActive() {
+        const hash = (location.hash || "").replace("#", "");
+        sublinks.forEach(a => a.classList.remove("is-active"));
+        if (!hash) return;
+        const el = document.querySelector('.nav-mobile-sublink[data-sub="' + hash + '"]');
+        if (el) el.classList.add("is-active");
+      }
+
+      window.addEventListener("hashchange", markSubActive);
+      markSubActive();
+    })();
   </script>
 </body>
 </html>

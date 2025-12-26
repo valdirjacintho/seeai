@@ -17,6 +17,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
+/* Ajuda quando o header sticky cobre âncoras */
+:target { scroll-margin-top: 90px; }
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--navy);
@@ -25,7 +28,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Acessibilidade: texto somente para leitores de tela */
+/* Acessibilidade */
 .sr-only {
   position: absolute !important;
   width: 1px; height: 1px;
@@ -90,13 +93,16 @@ header {
   text-transform: uppercase;
 }
 
-nav ul {
+/* NAV DESKTOP */
+.nav-desktop { display: block; }
+
+.nav-desktop ul {
   display: flex;
   gap: 1.8rem;
   list-style: none;
 }
 
-nav a {
+.nav-desktop a {
   color: var(--muted);
   text-transform: uppercase;
   font-size: 0.78rem;
@@ -106,9 +112,9 @@ nav a {
   display: inline-block;
 }
 
-nav a:hover { color: var(--white); }
+.nav-desktop a:hover { color: var(--white); }
 
-nav a::after {
+.nav-desktop a::after {
   content: "";
   display: block;
   width: 0%;
@@ -117,17 +123,203 @@ nav a::after {
   transition: width 0.2s ease-out;
 }
 
-nav a:hover::after { width: 100%; }
+.nav-desktop a:hover::after { width: 100%; }
 
-nav a.is-active { color: var(--white); }
-nav a.is-active::after { width: 100%; }
+.nav-desktop a.is-active { color: var(--white); }
+.nav-desktop a.is-active::after { width: 100%; }
 
-/* RESPONSIVO HEADER */
-@media (max-width: 900px) {
-  nav ul { display: none; }
+/* =========================
+   MENU RESPONSIVO (MOBILE)
+   ========================= */
+
+/* Botão hambúrguer */
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
-/* HERO */
+.nav-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+}
+
+.nav-toggle-lines {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+}
+
+.nav-toggle-lines::before,
+.nav-toggle-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.nav-toggle-lines::before { top: -7px; }
+.nav-toggle-lines::after  { top: 7px; }
+
+/* Drawer mobile */
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(360px, 88vw);
+  background: rgba(5, 13, 31, 0.96);
+  border-left: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(14px);
+  box-shadow: -20px 0 70px rgba(0,0,0,0.65);
+  transform: translateX(110%);
+  transition: transform 0.22s ease;
+  z-index: 120;
+}
+
+.nav-mobile-inner {
+  padding: 1.2rem 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.nav-mobile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-mobile-title {
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.nav-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.22);
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nav-close:hover {
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.28);
+}
+
+.nav-mobile-link {
+  padding: 0.95rem 0.95rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.nav-mobile-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(30,164,255,0.28);
+  background: rgba(30,164,255,0.06);
+}
+
+/* Active no mobile */
+.nav-mobile-link.is-active {
+  border-color: rgba(255,255,255,0.18);
+  background: linear-gradient(90deg, rgba(230,50,58,0.14), rgba(30,164,255,0.10));
+}
+
+/* Submenu (Produtos) */
+.nav-mobile-section {
+  margin-top: 0.3rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-mobile-section-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.70);
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.nav-mobile-sublink {
+  padding: 0.75rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.18);
+  color: rgba(255,255,255,0.88);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  margin-left: 0.55rem;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.nav-mobile-sublink:hover {
+  transform: translateY(-1px);
+  border-color: rgba(30,164,255,0.22);
+  background: rgba(30,164,255,0.05);
+}
+
+.nav-mobile-sublink.is-active {
+  border-color: rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Overlay */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+  z-index: 110;
+}
+
+/* Estado aberto */
+.nav-open .nav-mobile { transform: translateX(0%); }
+.nav-open .nav-overlay { opacity: 1; pointer-events: auto; }
+
+/* Breakpoint mobile */
+@media (max-width: 900px) {
+  .nav-desktop { display: none; }
+  .nav-toggle { display: inline-flex; }
+}
+
+/* HERO (INDEX) */
 .hero {
   min-height: 95vh;
   display: grid;
@@ -383,7 +575,7 @@ nav a.is-active::after { width: 100%; }
   transform: translateY(-1px);
 }
 
-/* --- BLOCOS HORIZONTAIS (seções longas) --- */
+/* --- BLOCOS HORIZONTAIS --- */
 .section-block {
   padding: 7rem 2rem;
   position: relative;
@@ -531,7 +723,7 @@ nav a.is-active::after { width: 100%; }
   background: rgba(255,255,255,0.03);
 }
 
-/* ===== ICONS: NITIDEZ MÁXIMA ===== */
+/* Ícones nítidos */
 .icon-wrap,
 .whatsapp-float {
   transform: translateZ(0);
@@ -610,57 +802,6 @@ nav a.is-active::after { width: 100%; }
   opacity: 1;
 }
 
-svg [stroke] { vector-effect: non-scaling-stroke; }
-
-/* COOKIE CONSENT */
-.cookie-consent {
-  position: fixed;
-  bottom: 1.15rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  max-width: 1040px;
-  width: calc(100% - 2.4rem);
-
-  background: rgba(5, 13, 31, 0.92);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 1.2rem;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.60);
-  padding: 1.15rem 1.35rem;
-  display: none;
-}
-
-.cookie-content {
-  display: flex;
-  gap: 1.2rem;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.cookie-content p {
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  max-width: 680px;
-}
-
-.cookie-actions {
-  display: flex;
-  gap: 0.6rem;
-  flex-shrink: 0;
-}
-
-@media (max-width: 740px) {
-  .cookie-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .cookie-actions {
-    width: 100%;
-    justify-content: flex-end;
-  }
-}
-
 /* FOOTER */
 footer {
   padding: 2.3rem 2rem;
@@ -671,13 +812,10 @@ footer {
   background: rgba(0,0,0,0.10);
 }
 
-footer small { display: block; margin-top: 0.5rem; opacity: 0.9; }
-
 /* =========================
    PÁGINA: PRODUTOS i2
    ========================= */
 
-/* HERO de Produtos */
 .product-hero {
   padding: 5.5rem 2rem 3.5rem;
 }
@@ -742,7 +880,6 @@ footer small { display: block; margin-top: 0.5rem; opacity: 0.9; }
   color: var(--muted);
 }
 
-/* Bandas horizontais */
 .product-band {
   position: relative;
   padding: 6rem 2rem;
@@ -813,7 +950,6 @@ footer small { display: block; margin-top: 0.5rem; opacity: 0.9; }
   gap: 0.8rem;
 }
 
-/* Cards da coluna direita */
 .product-card {
   padding: 1.6rem 1.6rem;
   border-radius: 1.2rem;
@@ -830,13 +966,10 @@ footer small { display: block; margin-top: 0.5rem; opacity: 0.9; }
   margin-bottom: 0.9rem;
 }
 
-/* Responsivo */
 @media (max-width: 1024px) {
   .product-hero-inner,
   .product-band-inner {
     grid-template-columns: 1fr;
   }
-  .product-hero {
-    padding-top: 4.4rem;
-  }
+  .product-hero { padding-top: 4.4rem; }
 }
