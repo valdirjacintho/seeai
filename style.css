@@ -11,21 +11,32 @@
   --border: #172743;
 
   --shadow: rgba(0, 0, 0, 0.55);
+
+  --glow-blue: rgba(30, 164, 255, 0.34);
+  --glow-red: rgba(230, 50, 58, 0.28);
+  --glow-soft: rgba(255, 255, 255, 0.08);
 }
 
 /* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-/* Ajuda quando o header sticky cobre âncoras */
+html { scroll-behavior: smooth; overflow-x: hidden; }
 :target { scroll-margin-top: 90px; }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--navy);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  background: var(--bg);
   color: var(--white);
   min-height: 100vh;
+  width: 100%;
+  position: relative;
   overflow-x: hidden;
+}
+
+/* Imagens/Vídeos previsíveis em qualquer browser */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Acessibilidade */
@@ -39,7 +50,7 @@ body {
   border: 0;
 }
 
-/* CANVAS ANIMADO */
+/* CANVAS */
 #network-bg {
   position: fixed;
   inset: 0;
@@ -128,11 +139,7 @@ header {
 .nav-desktop a.is-active { color: var(--white); }
 .nav-desktop a.is-active::after { width: 100%; }
 
-/* =========================
-   MENU RESPONSIVO (MOBILE)
-   ========================= */
-
-/* Botão hambúrguer */
+/* MOBILE NAV */
 .nav-toggle {
   display: none;
   width: 46px;
@@ -178,18 +185,21 @@ header {
 .nav-toggle-lines::before { top: -7px; }
 .nav-toggle-lines::after  { top: 7px; }
 
-/* Drawer mobile */
 .nav-mobile {
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: min(360px, 88vw);
-  background: rgba(5, 13, 31, 0.96);
+  background: linear-gradient(
+    to bottom,
+    rgba(8,16,34,0.965),
+    rgba(5,13,31,0.955)
+  );
   border-left: 1px solid rgba(255,255,255,0.10);
   backdrop-filter: blur(14px);
   box-shadow: -20px 0 70px rgba(0,0,0,0.65);
-  transform: translateX(110%);
+  transform: translateX(100%);
   transition: transform 0.22s ease;
   z-index: 120;
 }
@@ -228,11 +238,13 @@ header {
   font-size: 1.35rem;
   line-height: 1;
   cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
 }
 
 .nav-close:hover {
   border-color: rgba(255,255,255,0.22);
   background: rgba(0,0,0,0.28);
+  transform: translateY(-1px);
 }
 
 .nav-mobile-link {
@@ -243,22 +255,42 @@ header {
   color: rgba(255,255,255,0.92);
   font-weight: 700;
   letter-spacing: 0.04em;
-  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
 .nav-mobile-link:hover {
   transform: translateY(-1px);
   border-color: rgba(30,164,255,0.28);
   background: rgba(30,164,255,0.06);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.25);
 }
 
-/* Active no mobile */
 .nav-mobile-link.is-active {
   border-color: rgba(255,255,255,0.18);
-  background: linear-gradient(90deg, rgba(230,50,58,0.14), rgba(30,164,255,0.10));
+  background: linear-gradient(90deg, rgba(230,50,58,0.16), rgba(30,164,255,0.12));
+  box-shadow:
+    0 16px 34px rgba(0,0,0,0.28),
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 0 24px var(--glow-red),
+    0 0 28px var(--glow-blue);
+  position: relative;
 }
 
-/* Submenu (Produtos) */
+.nav-mobile-link.is-active::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--red), var(--blue));
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,0.06),
+    0 0 16px var(--glow-blue);
+}
+
 .nav-mobile-section {
   margin-top: 0.3rem;
   padding-top: 0.9rem;
@@ -283,21 +315,24 @@ header {
   font-weight: 650;
   letter-spacing: 0.02em;
   margin-left: 0.55rem;
-  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
 .nav-mobile-sublink:hover {
   transform: translateY(-1px);
   border-color: rgba(30,164,255,0.22);
   background: rgba(30,164,255,0.05);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.22);
 }
 
 .nav-mobile-sublink.is-active {
   border-color: rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.06);
+  background: linear-gradient(90deg, rgba(30,164,255,0.12), rgba(230,50,58,0.06));
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.24),
+    0 0 18px rgba(30,164,255,0.22);
 }
 
-/* Overlay */
 .nav-overlay {
   position: fixed;
   inset: 0;
@@ -309,17 +344,15 @@ header {
   z-index: 110;
 }
 
-/* Estado aberto */
 .nav-open .nav-mobile { transform: translateX(0%); }
 .nav-open .nav-overlay { opacity: 1; pointer-events: auto; }
 
-/* Breakpoint mobile */
 @media (max-width: 900px) {
   .nav-desktop { display: none; }
   .nav-toggle { display: inline-flex; }
 }
 
-/* HERO (INDEX) */
+/* HERO (index + datahub) */
 .hero {
   min-height: 95vh;
   display: grid;
@@ -408,15 +441,36 @@ header {
   line-height: 1.7;
 }
 
-/* Caixa interna do painel */
+/* NETWORK (painel interno) + FIX forte p/ Chrome/Edge */
 .network {
   margin-top: 1.4rem;
+  width: 100%;
   border-radius: 1rem;
-  min-height: 250px;
   background: radial-gradient(circle at bottom, #101f3f, #050916 70%);
   border: 1px solid #192643;
   overflow: hidden;
   position: relative;
+
+  /* ✅ FIX: evita “esticar” imprevisível */
+  min-height: 220px;
+  aspect-ratio: 16 / 9;
+}
+
+/* classe extra usada no datahub para fix “ainda mais previsível” */
+.network.network--fixed {
+  min-height: 240px;
+  height: auto;
+  max-height: 340px;
+}
+
+@media (max-width: 1024px) {
+  .network { min-height: 220px; }
+  .network.network--fixed { min-height: 220px; max-height: 320px; }
+}
+
+@media (max-width: 540px) {
+  .network { aspect-ratio: 4 / 3; min-height: 210px; }
+  .network.network--fixed { aspect-ratio: 4 / 3; min-height: 210px; }
 }
 
 .network-logo {
@@ -425,9 +479,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
-.logo-network { height: 125px; width: auto; opacity: 0.98; }
+.logo-network {
+  height: 125px;
+  width: auto;
+  opacity: 0.98;
+}
 
 /* BOTÕES */
 .btn {
@@ -465,13 +524,7 @@ header {
   color: var(--white);
 }
 
-.small-btn {
-  padding: 0.55rem 1.35rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-}
-
-/* SEÇÕES PADRÃO */
+/* SEÇÕES */
 .section-large {
   max-width: 1380px;
   margin: 0 auto;
@@ -575,7 +628,7 @@ header {
   transform: translateY(-1px);
 }
 
-/* --- BLOCOS HORIZONTAIS --- */
+/* BLOCOS */
 .section-block {
   padding: 7rem 2rem;
   position: relative;
@@ -597,7 +650,7 @@ header {
   background: linear-gradient(to bottom, rgba(20, 36, 72, 0.35), rgba(14, 28, 58, 0.6));
 }
 
-/* FORMULÁRIO */
+/* FORM */
 .contact-form {
   background: radial-gradient(circle at top left, #162952, #0c1b36 70%);
   border: 1px solid var(--border);
@@ -644,10 +697,8 @@ header {
   line-height: 1.6;
 }
 
-/* CONTACT RIGHT */
 .contact-right { display: flex; flex-direction: column; gap: 1.3rem; }
 
-/* Painel de contatos premium */
 .contact-card-panel {
   padding: 1.6rem 1.6rem 1.7rem;
   border-radius: 1.35rem;
@@ -715,7 +766,6 @@ header {
   text-overflow: ellipsis;
 }
 
-/* Painel institucional */
 .institutional-panel {
   padding: 1.6rem;
   border-radius: 1.35rem;
@@ -723,7 +773,6 @@ header {
   background: rgba(255,255,255,0.03);
 }
 
-/* Ícones nítidos */
 .icon-wrap,
 .whatsapp-float {
   transform: translateZ(0);
@@ -760,11 +809,9 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(0,0,0,0.28);
   backdrop-filter: blur(10px);
-
   box-shadow: 0 20px 55px rgba(0,0,0,0.55);
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
@@ -813,7 +860,7 @@ footer {
 }
 
 /* =========================
-   PÁGINA: PRODUTOS i2
+   PRODUTOS i2 (layout completo)
    ========================= */
 
 .product-hero {
@@ -827,6 +874,10 @@ footer {
   grid-template-columns: 1.55fr 1fr;
   gap: 3rem;
   align-items: start;
+}
+
+.product-hero-left {
+  min-width: 0;
 }
 
 .product-hero-title {
@@ -972,4 +1023,85 @@ footer {
     grid-template-columns: 1fr;
   }
   .product-hero { padding-top: 4.4rem; }
+}
+
+/* Cookie banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  max-width: 960px;
+  margin: 0 auto;
+  z-index: 200;
+  padding: 1.2rem 1.4rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(5, 13, 31, 0.95);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+}
+
+.cookie-banner p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cookie-banner a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Ajuste WhatsApp no mobile */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    right: calc(12px + env(safe-area-inset-right));
+    bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+}
+/* =========================
+   HEADER FIXO NO DESKTOP
+   (mantém o menu sempre visível)
+   ========================= */
+@media (min-width: 901px) {
+  header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999 !important;
+  }
+
+  /* Compensa a altura do header fixo para não cobrir o conteúdo */
+  .content-wrapper {
+    padding-top: 86px;
+  }
 }
